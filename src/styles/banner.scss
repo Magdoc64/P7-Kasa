@@ -1,0 +1,41 @@
+$color-constrat: #ffffff;
+$background-result:#F6F6F6;
+$color-kasa:#FF6060;
+
+.titre{
+    width: 100%;
+    margin: 20px 0;
+
+    &-banner{
+        width: 100%;
+        position: relative;
+
+        &-photo{
+            width: 100%;
+            height:223px;
+            object-fit: cover;
+            filter: contrast(20%);
+            filter: brightness(50%);
+            border-radius: 25px;
+            position: relative;
+            z-index: 1;
+
+            @media(max-width:1024px){
+                height:111px;
+            }
+        }
+
+        &-text{
+            color:$color-constrat;
+            position: absolute;
+            top: 35%;
+            left: 20%;
+            z-index: 2;
+
+            @media(max-width: 1024px){
+                top:15%;
+                left:5%;
+            }
+        }
+    }
+}
