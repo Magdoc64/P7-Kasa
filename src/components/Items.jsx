@@ -5,21 +5,15 @@ import '../styles/items.css'
 const Items = ({item, description}) => {
     const [isOpen, setIsOpen] = useState(false)
 
-    const DescriptionItems = () => {
-        return description.map((element, index) => {
-            return(
-                <span key={index}>{element}</span>
-            )
-        })
-    }
-
     return isOpen? (
         <li>
             <div className="item-titre">
                 <h2>{item}</h2>
                 <button onClick={() => setIsOpen(false)}><img src="../src/assets/chevron.png" alt="chevron bas" className="item-titre_chevron-bas"/></button>
             </div>
-            <p className="item-text item-text_open"><DescriptionItems/></p>
+            {description.map((element, index) => (
+                <p className="item-text item-text_open" key={index}>{element}</p>
+            ))}
         </li>
     )
     : (
@@ -28,7 +22,9 @@ const Items = ({item, description}) => {
                 <h2>{item}</h2>
                 <button onClick={() => setIsOpen(true)}><img src="../src/assets/chevron.png" alt="chevron haut" className="item-titre_chevron-haut"/></button>
             </div>
-            <p className="item-text"><DescriptionItems/></p>
+            {description.map((element, index) => (
+                <p className="item-text item-text_close" key={index}>{element}</p>
+            ))}
         </li>
     )
 }

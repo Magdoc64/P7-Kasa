@@ -4,44 +4,24 @@ import {listItems} from '../../data/listItems.js'
 import Items from '../../components/Items.jsx'
 
 const APropos = () => {
+    const activeNavigation = document.querySelector(".header-nav-item-active");
+    activeNavigation.classList.remove("header-nav-item-active")
 
-    const DisplayBanner = () => {
-        return elementBanner.map((element) => {
-            const valueId = element.id
+    const activeApropos = document.querySelector("#apropos");
+    activeApropos.classList.add("header-nav-item-active")
 
-            if (valueId===2) { 
-                return (
-                    <Banner 
-                        key={`${element.id}`}
-                        image={element.image}
-                        title={element.title}
-                        description={element.description}
-                    />
-                )
-            }
-        })
-      }
-    
-    const List = () => {
-        return listItems.map((item) => {
-            return (
-                <Items
-                    key={`${item.id}`}
-                    item={item.item}
-                    description={item.description}
-                />
-            )
-        })
-    }
 
     return (
         <main className='container'>
         <section className='titre'>
-            <DisplayBanner/>
+            {elementBanner.map((element) => (
+                element.id===2? (
+                    <Banner key={`${element.id}`} elementBanner={element}/>):null))}
         </section>
         <section className='apropos'>
             <ul className='apropos-item'>
-                <List/>
+                {listItems.map((item) => (
+                <Items key={`${item.id}`} item={item.item} description={item.description}/>))}
             </ul>
         </section>
         </main>

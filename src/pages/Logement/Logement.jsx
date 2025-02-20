@@ -1,64 +1,28 @@
-import { useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import DescriptionLodge from '../../components/DescriptionLodge.jsx'
 import Slider from '../../components/Slider.jsx'
+import lodges from '../../data/location.json'
+import ErrorPage from '../Error/Error.jsx'
 
 const Logement = () => {
-   
-    const [lodges,setLodges] = useState([]);
-    
     const {idCard} = useParams();
 
-    useEffect(() => {
-        fetch("../src/data/location.json")
-          .then (response => response.json())
-          .then (lodges => setLodges(lodges))
-          .catch(error=>console.log(error))
-      }, [])
-
     const currentLodge = lodges.filter(lodge => lodge.id === idCard);
-    
-    const DetailLodge = () => {
+  
+    const testLodge = lodges.find(lodge => lodge.id === idCard);
 
-        return currentLodge.map(lodge => {
-
-                return (
-                    <DescriptionLodge
-                        key={`${lodge.title}-${lodge.id}`}
-                        title={lodge.title}
-                        host={lodge.host}
-                        rating={lodge.rating}
-                        location={lodge.location}
-                        tags={lodge.tags}
-                        description={lodge.description}
-                        equipements={lodge.equipments}
-                    />
-                )
-        })
-    }
-
-    const SliderLodge = () => {
-        return currentLodge.map(lodge => {
-
-            return(
-                <Slider
-                    key={`${lodge.title}-${lodge.id}`}
-                    title={lodge.title}
-                    pictures={lodge.pictures}
-                />
-            )
-        })
-    }
-    
-    return (
+    return !testLodge ? (
+        <main>
+            <ErrorPage/>
+        </main>
+    ):(
+        <main>
+            {currentLodge.map(lodge => (
+                <Slider key={`${lodge.title}-${lodge.id}`} lodge={lodge}/>))}
         
-    <main>
-        
-        <SliderLodge/>
-        
-        <DetailLodge/>
-        
-    </main>
+            {currentLodge.map(lodge => (
+                <DescriptionLodge key={`${lodge.title}-${lodge.id}`} lodge={lodge}/>))}
+        </main>
     )
 }
 export default Logement

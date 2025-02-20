@@ -22,10 +22,13 @@
   height: 32px;
   background-color: #FF6060;
   color: #ffffff;
-  transition: transform 1000ms ease-in-out;
+  animation: chevron-init 800ms ease-in-out forwards;
 }
-.item-titre button :hover {
+.item-titre button:hover {
   cursor: pointer;
+}
+.item-titre button:active {
+  animation: chevron 800ms ease-in-out forwards;
 }
 .item-titre button img {
   display: block;
@@ -45,33 +48,114 @@
   transform: rotate(180deg);
 }
 .item-text {
+  display: flex;
   background-color: #F6F6F6;
   font-weight: 400;
-  height: 0%;
+  height: 0;
+  opacity: 0;
   transform: translateY(0);
-  font-size: 0px;
-  margin-block-end: 0;
-  transition: all 600ms ease-in-out;
-}
-.item-text_open {
   font-size: 18px;
-  height: 80%;
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 @media (max-width: 1024px) {
-  .item-text_open {
+  .item-text {
     font-size: 12px;
   }
 }
-.item-titre button :active {
-  transform: rotate(180deg);
+.item-text_open {
+  animation: paragraphe 800ms ease-in-out forwards;
 }
-.item-titre button :active + .item-text {
-  transform: translateY(-15%);
-  font-size: 18px;
-  height: 80%;
+.item-text_close {
+  animation: paragraphe-init 800ms ease-in-out forwards;
+  font-size: 0;
 }
-@media (max-width: 1024px) {
-  .item-titre button :active + .item-text {
-    font-size: 12px;
+
+@keyframes chevron {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes chevron-init {
+  0% {
+    transform: rotate(180deg);
+  }
+  25% {
+    transform: rotate(135deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes paragraphe {
+  0% {
+    height: 0;
+    opacity: 0;
+    transform: translateY(0);
+  }
+  25% {
+    height: 25%;
+    opacity: 0.25;
+    transform: translateY(1%);
+  }
+  50% {
+    height: 50%;
+    opacity: 0.5;
+    transform: translateY(2%);
+  }
+  75% {
+    height: 75%;
+    opacity: 0.75;
+    transform: translateY(3%);
+  }
+  100% {
+    height: 80%;
+    opacity: 1;
+    transform: translateY(5%);
+  }
+}
+@keyframes paragraphe-init {
+  0% {
+    height: 80%;
+    opacity: 1;
+    transform: translateY(5%);
+  }
+  25% {
+    height: 75%;
+    opacity: 0.75;
+    transform: translateY(3%);
+  }
+  50% {
+    height: 50%;
+    opacity: 0.5;
+    transform: translateY(2%);
+  }
+  75% {
+    height: 25%;
+    opacity: 0.25;
+    transform: translateY(1%);
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=items.css.map */

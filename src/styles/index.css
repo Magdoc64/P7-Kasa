@@ -105,10 +105,13 @@ main {
     gap: 26px;
   }
 }
-.header-nav a {
+.header-nav-item {
   border-bottom: 1px solid #ffffff;
 }
-.header-nav a:hover {
+.header-nav-item:hover {
+  border-bottom: 1px solid #000000;
+}
+.header-nav-item-active {
   border-bottom: 1px solid #000000;
 }
 
