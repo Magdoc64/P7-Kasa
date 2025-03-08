@@ -1,7 +1,6 @@
 import logoKasaWhite from '../assets/logo-white.png'
 
 const Footer = () => {
-    
     return (
         <footer className='footer'>
             <img src={logoKasaWhite} alt = "logo Kasa" className='footer-logo'/>

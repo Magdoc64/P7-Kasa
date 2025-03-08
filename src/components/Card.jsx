@@ -1,6 +1,5 @@
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import PropTypes from "prop-types"
-//import ErrorPage from '../pages/Error/Error.jsx'
 
 const Card = ({lodge}) => {
     let idCard = lodge.id;
@@ -15,12 +14,12 @@ const Card = ({lodge}) => {
     };
 
     return (
-        <button onClick={handleClick}>
+        <Link to={`/logement/${idCard}`} onClick={handleClick}>
             <article className="location-card">
                 <img src = {lodge.cover} alt={lodge.title} className="location-card-image"/>
                 <h2 className="location-card-titre">{lodge.title}</h2>
             </article>
-        </button>
+        </Link>
     )
 }
 

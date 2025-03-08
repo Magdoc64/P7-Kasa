@@ -100,18 +100,12 @@ main{
 
     &-item{
       border-bottom:1px solid #ffffff;
-
-      &:hover{
-        border-bottom:1px solid #000000;
-      }
-
-      &-active{
-        border-bottom:1px solid #000000;
-      }
     }
   }
 }
-
+.active{
+  border-bottom:1px solid #000000;
+}
 .footer{
   width: 100%;
   display: flex;

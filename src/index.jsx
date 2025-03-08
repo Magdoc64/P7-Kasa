@@ -11,18 +11,18 @@ import Footer from './components/Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <Router>
+    <Router>
       <div className='global container'>
         <Header/>
           <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/logement/:idCard" element={<Logement />} />
-              <Route path="/a-propos" element={<APropos />} />
-              <Route path="*" element={<ErrorPage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/logement/:idCard" element={<Logement />} />
+            <Route path="/a-propos" element={<APropos />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
-        <Footer/>
-      </Router>
+      <Footer/>
+    </Router>
   </StrictMode>,
 )
 

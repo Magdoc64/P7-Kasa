@@ -108,10 +108,8 @@ main {
 .header-nav-item {
   border-bottom: 1px solid #ffffff;
 }
-.header-nav-item:hover {
-  border-bottom: 1px solid #000000;
-}
-.header-nav-item-active {
+
+.active {
   border-bottom: 1px solid #000000;
 }
 

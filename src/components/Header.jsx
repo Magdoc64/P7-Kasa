@@ -1,16 +1,15 @@
 import logoKasa from '../assets/LOGO.png'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
-
     return (
-    <header className='header'>
-        <img src = {logoKasa} alt = 'logo Kasa' className='header-logo'/>
-        <nav className='header-nav'>
-            <Link to="/" className='header-nav-item header-nav-item-active' id='accueil'>Accueil</Link>
-            <Link to="/a-propos" className='header-nav-item' id='apropos'>A propos</Link>
-        </nav>
-    </header>)
+        <header className='header'>
+            <img src = {logoKasa} alt = 'logo Kasa' className='header-logo'/>
+            <nav className='header-nav'>
+                <NavLink to="/" className='header-nav-item' id='accueil'>Accueil</NavLink>
+                <NavLink to="/a-propos" className='header-nav-item' id='apropos'>A propos</NavLink>
+            </nav>
+        </header>)
 }
 
 export default Header

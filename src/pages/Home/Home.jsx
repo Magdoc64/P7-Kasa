@@ -5,13 +5,6 @@ import Banner from '../../components/Banner.jsx'
 import lodges from '../../data/location.json'
 
 const Home = () => {
-  /*const activeNavigation = document.querySelector(".header-nav-item-active");
-  activeNavigation.classList.remove("header-nav-item-active")
-
-  const activeAccueil = document.querySelector("#accueil");
-  activeAccueil.classList.add("header-nav-item-active");*/
-  
-
   return (
     <main>
       <section className='titre'>

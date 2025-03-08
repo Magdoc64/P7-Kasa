@@ -45,12 +45,12 @@ $color-kasa:#FF6060;
       width: 65%;
       position: absolute;
       z-index:2;
-      top: 75%;
+      top: 73%;
       left:10px;
+      font-size: 18px;
       color: $color-constrat;
 
       @media(max-width:1024px){
-        font-size: 18px;
         top:70%;
       }
 
@@ -106,19 +106,19 @@ $color-kasa:#FF6060;
   }
 
   &-control{
-    width: 98%;
+    width: 80%;
     position: absolute;
     z-index: 2;
     top:33%;
-    left: 1%;
+    left: 10%;
     display: flex;
     justify-content: space-between;
     object-fit: contain;
 
-    @media(max-width: 1024px){
-      width: 100%;
-      top:23%;
-      left:3%;
+    @media(min-width: 1024px) and (max-width:1440px){
+      width: 98%;
+      top:33%;
+      left:1%;
     }
     
     & button {
