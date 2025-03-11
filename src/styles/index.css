@@ -106,7 +106,13 @@ main {
   }
 }
 .header-nav-item {
+  font-size: 24px;
   border-bottom: 1px solid #ffffff;
+}
+@media (max-width: 1024px) {
+  .header-nav-item {
+    font-size: 12px;
+  }
 }
 
 .active {
@@ -123,9 +129,13 @@ main {
   color: #ffffff;
   padding: 50px 0;
 }
+.footer-copyright {
+  font-size: 24px;
+}
 @media (max-width: 1024px) {
   .footer-copyright {
     width: 50%;
     text-align: center;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=index.css.map */

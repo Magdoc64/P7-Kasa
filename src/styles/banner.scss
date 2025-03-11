@@ -32,9 +32,14 @@ $color-kasa:#FF6060;
             left: 20%;
             z-index: 2;
 
-            @media(max-width: 1024px){
+            @media(max-width: 403px){
                 top:15%;
                 left:5%;
+            }
+
+            @media (min-width:403px) and (max-width: 1024px){
+                top:30%;
+                left:3%;
             }
         }
     }

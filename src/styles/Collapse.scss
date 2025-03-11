@@ -18,6 +18,8 @@ $color-kasa:#FF6060;
         }
 
         & h2{
+            font-size: 18px;
+
             @media(max-width: 1024px){
                 font-size: 13px;
             }
@@ -62,10 +64,10 @@ $color-kasa:#FF6060;
     flex-direction: column;
     background-color: $background-result;
     font-weight: 400;
+    font-size: 18px;
     height: 0;
     opacity: 0;
     transform: translateY(0);
-    font-size: 18px;
     margin-block-end: 0;
     margin-block-start:0;
     transition: all 800ms ease-in-out;

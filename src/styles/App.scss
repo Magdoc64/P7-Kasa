@@ -51,7 +51,7 @@ $color-kasa:#FF6060;
       color: $color-constrat;
 
       @media(max-width:1024px){
-        top:70%;
+        top:68%;
       }
 
     }
@@ -109,15 +109,21 @@ $color-kasa:#FF6060;
     width: 80%;
     position: absolute;
     z-index: 2;
-    top:33%;
+    top:34%;
     left: 10%;
     display: flex;
     justify-content: space-between;
     object-fit: contain;
 
+    @media(max-width:1024px){
+      width: 98%;
+      top:23%;
+      left:3%;
+    }
+
     @media(min-width: 1024px) and (max-width:1440px){
       width: 98%;
-      top:33%;
+      top:37%;
       left:1%;
     }
     
@@ -167,11 +173,20 @@ $color-kasa:#FF6060;
 
       &-title{
         font-size: 36px;
+        font-weight: 500;
         color:$color-kasa;
+
+        @media(max-width: 1024px){
+          font-size: 18px;
+        }
       }
 
       &-lieu{
         margin-bottom: 10px;
+
+        @media(max-width: 1024px){
+          font-size: 14px;
+        }
       }
 
       &-tags{
@@ -184,7 +199,7 @@ $color-kasa:#FF6060;
           font-weight: 700;
           color: $color-constrat;
           border-radius: 10px;
-          padding: 0 15px;
+          padding: 2px 15px;
 
           @media(max-width: 1024px){
             font-size: 10px;
@@ -245,6 +260,9 @@ $color-kasa:#FF6060;
         }
 
         & img{
+          width: 36px;
+          height: 36px;
+
           @media(max-width: 1024px){
             width: 18px;
             height: 18px;
@@ -319,5 +337,9 @@ $color-kasa:#FF6060;
 
   &-lien{
     border-bottom: 1px solid #000000;
+
+    @media(max-width: 1024px){
+      font-size: 12px;
+    }
   }
 }

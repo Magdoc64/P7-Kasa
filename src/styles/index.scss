@@ -99,7 +99,12 @@ main{
     }
 
     &-item{
+      font-size: 24px;
       border-bottom:1px solid #ffffff;
+
+      @media(max-width:1024px){
+        font-size: 12px;
+      }
     }
   }
 }
@@ -117,9 +122,12 @@ main{
   padding: 50px 0;
 
   &-copyright{
+    font-size: 24px;
+
     @media(max-width:1024px){
       width: 50%;
       text-align: center;
+      font-size: 12px;
     }
   }
   
