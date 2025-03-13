@@ -123,6 +123,13 @@
     left: 1%;
   }
 }
+@media (min-width: 1440px) {
+  .slider-control {
+    width: 62%;
+    top: 30%;
+    left: 19%;
+  }
+}
 .slider-control button {
   cursor: pointer;
 }

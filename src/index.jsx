@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')).render(
             <Route path="/a-propos" element={<APropos />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
-        </div>
+      </div>
       <Footer/>
     </Router>
   </StrictMode>,

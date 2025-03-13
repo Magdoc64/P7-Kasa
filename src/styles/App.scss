@@ -126,6 +126,12 @@ $color-kasa:#FF6060;
       top:37%;
       left:1%;
     }
+
+    @media(min-width: 1440px){
+      width: 62%;
+      top:30%;
+      left:19%;
+    }
     
     & button {
       cursor: pointer;

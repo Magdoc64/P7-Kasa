@@ -112,6 +112,7 @@ main {
 @media (max-width: 1024px) {
   .header-nav-item {
     font-size: 12px;
+    text-transform: uppercase;
   }
 }
 
