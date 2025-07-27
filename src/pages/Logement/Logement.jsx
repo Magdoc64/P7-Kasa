@@ -3,6 +3,8 @@ import Gallery from '../../components/Gallery.jsx'
 import lodges from '../../data/location.json'
 import ErrorPage from '../Error/Error.jsx'
 import Collapse from '../../components/Collapse.jsx'
+import StarColor from '../../assets/star-color.png'
+import StarGrey from '../../assets/star-grey.png'
 
 const Logement = () => {
     const {idCard} = useParams();
@@ -36,10 +38,10 @@ const Logement = () => {
                         </div>
                         <div className="lodge-lieu-hote-note">
                             {range.map(rangeElement => currentLodge.rating >= rangeElement? (
-                                <span key={rangeElement.toString()}><img src="../src/assets/star-color.png" alt="etoile pleine"/></span>
+                                <span key={rangeElement.toString()}><img src={StarColor} alt="etoile pleine"/></span>
                             ):null)}
                             {range.map(rangeElement => (5 - currentLodge.rating) > range.indexOf(rangeElement)? (
-                                <span key={`${range.indexOf(rangeElement)}-${rangeElement.toString()}`}><img src="../src/assets/star-grey.png" alt="etoile vide"/></span>
+                                <span key={`${range.indexOf(rangeElement)}-${rangeElement.toString()}`}><img src={StarGrey} alt="etoile vide"/></span>
                             ):null)}
                         </div>
                     </div>

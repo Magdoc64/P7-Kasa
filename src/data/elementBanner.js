@@ -1,13 +1,16 @@
+import ImageAccueil from "./../assets/accueil.png"
+import ImageApropos from "./../assets/a-propos.png"
+
 export const elementBanner = [
     {
         id:1,
-        image:"./src/assets/accueil.png",
+        image:ImageAccueil,
         title:"Chez vous, partout et ailleurs",
         description:"image paysage cotier"
     },
     {
         id:2,
-        image:"./src/assets/a-propos.png",
+        image:ImageApropos,
         description:"image paysage montagnard"
     }
 ]

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types"
+import ArrowLeft from '../assets/chevron-left.png'
+import ArrowRight from '../assets/chevron-right.png'
 
 const Gallery = ({lodge}) => {
     
@@ -24,10 +26,10 @@ const Gallery = ({lodge}) => {
         <section className='slider'>
             <div className="slider-control">
                 <button onClick={previousSlide} className="slider-control-left">
-                    <img src="../src/assets/chevron-left.png" alt="flèche gauche"/>
+                    <img src={ArrowLeft} alt="flèche gauche"/>
                 </button>
                 <button onClick={nextSlide} className="slider-control-right">
-                    <img src="../src/assets/chevron-right.png" alt="flèche droite"/>
+                    <img src={ArrowRight} alt="flèche droite"/>
                 </button>
             </div>
             <div className="slider-container">
